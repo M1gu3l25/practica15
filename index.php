@@ -75,17 +75,12 @@ function calcula_densidad() {
         <p>a) La distancia de la Tierra es:<br>
         332 946M / (1.5 * 10⁸ km - r²) = M/r² <br>
         </p>
-        <form method="post" action="">
-          <button type="submit" name="calcular">Presiona para calcular</button>
-        </form>
       </section>
       <section class="resultado">
         <h2>Resultado:</h2>
         <div id="resultadoA">
           <?php
-          if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['calcular'])) {
-              echo calcula_densidad();
-          }
+          echo calcula_densidad();
           ?>
         </div>
       </section>
